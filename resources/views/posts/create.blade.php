@@ -36,7 +36,7 @@ Create post
         <select class="form-control" id="post_creator_id" name="post_creator_id">
             <option disabled selected >Select a Poster</option>
             @foreach($creators as $creator) 
-            <option value="{{$creator->id}}" {{old('post_creator_id') == $creator->name ? "selected" : ''}}>{{$creator->name}} </option>
+            <option value="{{$creator->id}}" {{old('post_creator_id') == $creator->id ? "selected" : ''}}>{{$creator->name}}</option>
             @endforeach
         </select>
     </div>
