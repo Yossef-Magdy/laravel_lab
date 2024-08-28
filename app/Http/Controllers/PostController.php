@@ -22,6 +22,7 @@ class PostController extends Controller
         return view('posts.create', ['creators'=>$creators]);
     }
     public function store(StorePostRequest $request) {
+        dd($request);
         $image_path = "";
         if ($request->hasFile('image')) {
             $image = $request->file('image');
