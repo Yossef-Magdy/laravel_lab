@@ -14,3 +14,6 @@ Route::get("/",[PostController::class, "home"] )->name("posts.home");
 // Route::post("/posts/update/{id}", [PostController::class, "update"])->name("posts.update");
 
 Route::resource("/posts", PostController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
